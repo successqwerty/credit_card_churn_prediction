@@ -49,8 +49,6 @@ model.fit(X_train,y_train,epochs=50,batch_size=32)
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f"✅ Accuracy: {accuracy:.4f}")
 
-# model.save("model.h5")
-
 print("✅ Model trained and saved successfully!")
 
 from sklearn.metrics import confusion_matrix,classification_report
