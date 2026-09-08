@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Credit Card Churn Prediction</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-icon">▣</span>
+
+            <div>
+                <h2>ChurnPredict</h2>
+                <p>AI-Powered Customer Analytics</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">How It Works</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main container -->
+    <main class="container">
+
+        <!-- Left side -->
+        <section class="form-section">
+
+            <div class="page-title">
+                <h1>Credit Card Churn Prediction</h1>
+
+                <p>
+                    Enter customer information to predict the likelihood
+                    of customer churn.
+                </p>
+            </div>
+
+
+            <!-- PERSONAL INFORMATION -->
+
+            <div class="card">
+
+                <h2>👤 Personal Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Customer Age</label>
+                        <input type="number" id="age" placeholder="e.g. 45">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+
+                        <select id="gender">
+                            <option value="">Select gender</option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Number of Dependents</label>
+                        <input type="number" id="dependents" placeholder="e.g. 3">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Education Level</label>
+
+                        <select id="education">
+                            <option value="">Select education</option>
+                            <option value="Graduate">Graduate</option>
+                            <option value="High School">High School</option>
+                            <option value="College">College</option>
+                            <option value="Post-Graduate">Post-Graduate</option>
+                            <option value="Doctorate">Doctorate</option>
+                            <option value="Uneducated">Uneducated</option>
+                            <option value="Unknown">Unknown</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Marital Status</label>
+
+                        <select id="marital">
+                            <option value="">Select status</option>
+                            <option value="Married">Married</option>
+                            <option value="Single">Single</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Unknown">Unknown</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Income Category</label>
+
+                        <select id="income">
+                            <option value="">Select income</option>
+                            <option value="Less than $40K">Less than $40K</option>
+                            <option value="$40K - $60K">$40K - $60K</option>
+                            <option value="$60K - $80K">$60K - $80K</option>
+                            <option value="$80K - $120K">$80K - $120K</option>
+                            <option value="$120K +">$120K +</option>
+                            <option value="Unknown">Unknown</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACCOUNT INFORMATION -->
+
+            <div class="card">
+
+                <h2>💳 Account Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Credit Limit ($)</label>
+                        <input type="number" id="creditLimit" placeholder="e.g. 12000">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Card Category</label>
+
+                        <select id="cardCategory">
+                            <option value="">Select card</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Silver">Silver</option>
+                            <option value="Gold">Gold</option>
+                            <option value="Platinum">Platinum</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Total Relationship Count</label>
+                        <input type="number" id="relationships" placeholder="e.g. 4">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CUSTOMER ACTIVITY -->
+
+            <div class="card">
+
+                <h2>📊 Customer Activity</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Months on Book</label>
+                        <input type="number" id="monthsBook" placeholder="e.g. 36">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Months Inactive (Last 12 Months)</label>
+                        <input type="number" id="monthsInactive" placeholder="e.g. 2">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Contacts Count (Last 12 Months)</label>
+                        <input type="number" id="contacts" placeholder="e.g. 3">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TRANSACTION DETAILS -->
+
+            <div class="card">
+
+                <h2>💰 Credit & Transaction Details</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Total Revolving Balance ($)</label>
+                        <input type="number" id="revolvingBalance" placeholder="e.g. 2500">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Average Open To Buy ($)</label>
+                        <input type="number" id="openToBuy" placeholder="e.g. 10000">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Transaction Amount ($)</label>
+                        <input type="number" id="transactionAmount" placeholder="e.g. 5000">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Transaction Count</label>
+                        <input type="number" id="transactionCount" placeholder="e.g. 50">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Amount Change (Q4/Q1)</label>
+                        <input type="number" step="0.01" id="amountChange" placeholder="e.g. 1.2">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Transaction Count Change (Q4/Q1)</label>
+                        <input type="number" step="0.01" id="countChange" placeholder="e.g. 1.1">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Average Utilization Ratio</label>
+                        <input type="number" step="0.01" id="utilization" placeholder="e.g. 0.5">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button class="predict-button" onclick="predictChurn()">
+                Predict Churn
+            </button>
+
+        </section>
+
+
+        <!-- RIGHT SIDE -->
+
+        <aside class="result-section">
+
+            <div class="result-card">
+
+                <h2>Prediction Result</h2>
+
+                <div id="result">
+
+                    <div class="result-icon">
+                        🎯
+                    </div>
+
+                    <h3>Ready to Predict</h3>
+
+                    <p>
+                        Enter the customer information and click
+                        "Predict Churn" to see the result.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>About This Prediction</h3>
+
+                <p>
+                    This application uses a deep learning model to
+                    predict whether a credit card customer is likely
+                    to churn.
+                </p>
+
+                <div class="info-item">
+                    <strong>Model</strong>
+                    <span>Artificial Neural Network</span>
+                </div>
+
+                <div class="info-item">
+                    <strong>Prediction</strong>
+                    <span>Customer Churn</span>
+                </div>
+
+                <div class="info-item">
+                    <strong>Threshold</strong>
+                    <span>0.30</span>
+                </div>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
